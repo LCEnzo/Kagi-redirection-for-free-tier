@@ -12,7 +12,7 @@
 (function () {
   'use strict';
   
-	var googButton = document.querySelectorAll('form.search-form button[formaction*="google"]');
+  var googButton = document.querySelectorAll('form.search-form button[formaction*="google"]');
 
   if(googButton.length != 1) {
     console.error('googButton is more than 1 selected element, ' + googButton.length);
