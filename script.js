@@ -10,19 +10,20 @@
 // ==/UserScript==
 
 (function () {
-  'use strict';
+  'use strict'
   
-  var googButton = document.querySelectorAll('form.search-form button[formaction*="google"]');
+  var googButton = document.querySelectorAll('.search-elsewhere a[href*="google"]')
 
   if(googButton.length != 1) {
-    console.error('googButton is more than 1 selected element, ' + googButton.length);
+    console.error('googButton is more than 1 selected element, ' + googButton.length)
 
     if(googButton.length == 0) {
-      throw 'No button found';
+      throw 'No button found'
     }
   }   
 
-  console.error('googButton is more than 1 selected element, ' + googButton.length);
+  console.error('googButton is more than 1 selected element, ' + googButton.length)
   
-  googButton[0].click();
+  googButton[0].target = ""
+  googButton[0].click()
 }());
